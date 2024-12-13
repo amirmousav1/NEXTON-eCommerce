@@ -84,7 +84,7 @@ export default function RootLayout({ children }) {
               />
             </form>
             <div className="flex gap-4 sm:gap-[22px]">
-              <a href="#">
+              <Link href="/login">
                 <svg
                   className="size-5 sm:size-auto"
                   width={24}
@@ -108,7 +108,7 @@ export default function RootLayout({ children }) {
                     strokeLinejoin="round"
                   />
                 </svg>
-              </a>
+              </Link>
               <a href="#">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
