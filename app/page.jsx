@@ -42,7 +42,7 @@ export default function Home() {
               </svg>
             </div>
             <div className="flex flex-col gap-[2px]">
-              <span className="font-semibold text-lg text-primary">
+              <span className="font-semibold text-lg text-primary dark:text-[#e5e7eb] dark:font-medium">
                 Free shipping
               </span>
               <span className="text-sm text-bodyColor">
@@ -83,7 +83,7 @@ export default function Home() {
               </svg>
             </div>
             <div className="flex flex-col gap-[2px]">
-              <span className="font-semibold text-lg text-primary">
+              <span className="font-semibold text-lg text-primary dark:text-[#e5e7eb] dark:font-medium">
                 Very easy to return
               </span>
               <span className="text-sm text-bodyColor">Just phone number</span>
@@ -122,7 +122,7 @@ export default function Home() {
               </svg>
             </div>
             <div className="flex flex-col gap-[2px]">
-              <span className="font-semibold text-lg text-primary">
+              <span className="font-semibold text-lg text-primary dark:text-[#e5e7eb] dark:font-medium">
                 Worldwide delivery
               </span>
               <span className="text-sm text-bodyColor">
@@ -156,7 +156,7 @@ export default function Home() {
               </svg>
             </div>
             <div className="flex flex-col gap-[2px]">
-              <span className="font-semibold text-lg text-primary">
+              <span className="font-semibold text-lg text-primary dark:text-[#e5e7eb] dark:font-medium">
                 Refunds policy
               </span>
               <span className="text-sm text-bodyColor">
@@ -167,7 +167,9 @@ export default function Home() {
         </section>
         <section className="flex mt-[82px] flex-col gap-10">
           <h1 className="text-[28px] sm:text-[22px] md:text-[25px] lg:text-3xl font-semibold text-[#4B5563]/80">
-            <span className="text-primary">Recommendations.</span>{" "}
+            <span className="text-primary dark:text-white">
+              Recommendations.
+            </span>{" "}
             <span className="hidden sm:inline">
               Best matching products for you
             </span>

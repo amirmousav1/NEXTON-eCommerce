@@ -43,7 +43,7 @@ function Slider() {
   }, []);
 
   return (
-    <section className="bg-[#F3F3F3] relative w-full h-[550px] md:h-[400px] lg:h-[500px] xl:h-[600px] flex items-center overflow-hidden">
+    <section className="bg-[#F3F3F3] dark:bg-bodyColor relative w-full h-[550px] md:h-[400px] lg:h-[500px] xl:h-[600px] flex items-center overflow-hidden">
       {slides.map((slide, i) => (
         <div
           key={slide.id}
@@ -55,10 +55,10 @@ function Slider() {
           <div className="relative flex h-full items-center justify-center">
             <div className="container px-4 top-1/2 -translate-y-1/2 absolute">
               <div className="md:w-2/3">
-                <span className="md:text-lg block mb-2 md:mb-6 text-sm xl:text-xl text-bodyColor font-medium">
+                <span className="md:text-lg dark:text-[#e5e7eb] block dark:md:text-bodyColor mb-2 md:mb-6 text-sm xl:text-xl text-bodyColor font-medium">
                   {slide.description}
                 </span>
-                <h3 className="lg:text-[50px] md:text-[40px] text-3xl mb-10 md:mb-6 leading-[38px] md:leading-[55px] lg:leading-[72px] xl:text-[64px] text-primary font-semibold">
+                <h3 className="lg:text-[50px] dark:font-medium dark:md:font-semibold dark:text-[#e5e7eb] dark:md:text-primary md:text-[40px] text-3xl mb-10 md:mb-6 leading-[38px] md:leading-[55px] lg:leading-[72px] xl:text-[64px] text-primary font-semibold">
                   {slide.title}
                 </h3>
                 <a

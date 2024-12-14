@@ -20,7 +20,7 @@ async function RecommendedProductsList() {
             <div className="flex flex-col w-full">
               <Link
                 href={`/products/${product.id}`}
-                className="font-semibold text-primary"
+                className="font-semibold dark:font-medium text-primary dark:text-[#e5e7eb]"
               >
                 {product.title}
               </Link>

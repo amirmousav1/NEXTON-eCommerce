@@ -15,7 +15,7 @@ export default async function Page({ params }) {
         <AddToCart data={data} />
       </div>
       <div className="border mt-10 p-[33px] border-[#E5E7EB] rounded-2xl">
-        <h1 className="text-xl font-semibold md:text-3xl xl:text-4xl">
+        <h1 className="text-xl font-semibold dark:font-medium dark:text-[#e5e7eb] md:text-3xl xl:text-4xl">
           {data.title}
         </h1>
         <p className="text-bodyColor text-sm md:text-base leading-6 mt-4">

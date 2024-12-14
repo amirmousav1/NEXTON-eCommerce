@@ -28,10 +28,13 @@ export default function page() {
   if (!cart.length) {
     return (
       <div className="container mx-auto px-4 mt-10 text-center">
-        <h2 className="text-2xl font-semibold text-primary">
+        <h2 className="text-2xl font-semibold text-primary dark:font-medium dark:text-[#e5e7eb]">
           Your cart is empty.
         </h2>
-        <Link href="/" className="text-primary underline mt-4 inline-block">
+        <Link
+          href="/"
+          className="text-primary dark:font-medium dark:text-[#e5e7eb] underline mt-4 inline-block"
+        >
           Go to Homepage
         </Link>
       </div>
@@ -40,7 +43,9 @@ export default function page() {
   return (
     <div className="container mx-auto px-4 mt-10">
       <Toaster />
-      <h1 className="text-primary font-semibold text-4xl">Cart</h1>
+      <h1 className="text-primary font-semibold text-4xl dark:font-medium dark:text-[#e5e7eb]">
+        Cart
+      </h1>
       <div className="font-medium text-[#4B5563] mt-3">
         <Link href="/">Homepage</Link> / <Link href="/cart">Cart</Link>
       </div>
@@ -75,7 +80,7 @@ export default function page() {
             <div className="flex flex-1 flex-col gap-2">
               <label
                 htmlFor="name"
-                className="font-semibold text-sm text-primary"
+                className="font-semibold text-sm text-primary dark:text-bodyColor"
               >
                 Your name
               </label>
@@ -85,13 +90,13 @@ export default function page() {
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="border rounded-xl focus:outline-none h-9 border-[#E5E7EB]"
+                className="border rounded-xl focus:outline-none h-9 border-[#E5E7EB] dark:bg-bodyColor dark:border-none"
               />
             </div>
             <div className="flex flex-1 flex-col gap-2">
               <label
                 htmlFor="email"
-                className="font-semibold text-sm text-primary"
+                className="font-semibold text-sm text-primary dark:text-bodyColor"
               >
                 Your email
               </label>
@@ -101,14 +106,14 @@ export default function page() {
                 type="text"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="border rounded-xl focus:outline-none h-9 border-[#E5E7EB]"
+                className="border rounded-xl focus:outline-none h-9 border-[#E5E7EB] dark:bg-bodyColor dark:border-none"
               />
             </div>
           </div>
           <div className="flex p-6 pt-0 pb-8 flex-1 flex-col gap-2">
             <label
               htmlFor="address"
-              className="font-semibold text-sm text-primary"
+              className="font-semibold text-sm text-primary dark:text-bodyColor"
             >
               Your Address
             </label>
@@ -117,12 +122,12 @@ export default function page() {
               value={address}
               onChange={(e) => setAddress(e.target.value)}
               id="address"
-              className="border rounded-xl focus:outline-none h-20 p-2 border-[#E5E7EB]"
+              className="border rounded-xl focus:outline-none h-20 p-2 border-[#E5E7EB] dark:bg-bodyColor dark:border-none"
             />
           </div>
         </div>
         <div className="mt-6 md:mt-0">
-          <h2 className="font-semibold text-2xl text-primary pb-6 border-b border-[#E5E7EB]">
+          <h2 className="font-semibold dark:font-medium dark:text-[#e5e7eb] text-2xl text-primary pb-6 border-b border-[#E5E7EB]">
             Order summary
           </h2>
           {cart.map((item) => (
@@ -136,22 +141,22 @@ export default function page() {
                 alt={item.title}
               />
               <div className="flex-1 flex flex-col justify-between">
-                <span className="font-semibold text-primary">
+                <span className="font-semibold text-primary dark:text-bodyColor">
                   {item.quantity} * {item.title}
                 </span>
-                <span className="ml-auto font-semibold text-primary">
+                <span className="ml-auto font-semibold text-primary dark:font-medium dark:text-bodyColor">
                   ${item.price * item.quantity}
                 </span>
               </div>
             </div>
           ))}
-          <div className="flex justify-between items-center py-6">
+          <div className="flex justify-between items-center py-6 dark:text-bodyColor">
             <span>Order total</span>
             <span>${totalOrder}</span>
           </div>
           <button
             onClick={handleSubmitOrder}
-            className="bg-primary w-full text-white font-medium py-[14px] rounded-full"
+            className="bg-primary w-full text-white font-medium py-[14px] rounded-full dark:bg-bodyColor dark:text-primary"
           >
             Confirm order
           </button>

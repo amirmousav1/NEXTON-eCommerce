@@ -24,21 +24,21 @@ function AddToCart({ data }) {
             <button
               disabled={quantity === 1}
               onClick={() => setQuantity((cur) => (cur === 1 ? cur : --cur))}
-              className="px-8 text-primary border py-1 border-[#E5E7EB] rounded-full"
+              className="px-8 text-primary dark:text-[#e5e7eb] border py-1 border-[#E5E7EB] rounded-full"
             >
               -
             </button>
             <span className="font-medium">{quantity}</span>
             <button
               onClick={() => setQuantity((cur) => ++cur)}
-              className="px-8 text-primary border py-1 border-[#E5E7EB] rounded-full"
+              className="px-8 text-primary dark:text-[#e5e7eb] border py-1 border-[#E5E7EB] rounded-full"
             >
               +
             </button>
           </div>
           <button
             onClick={handleAddToCart}
-            className="bg-primary w-full items-center py-[14px] justify-center rounded-full gap-2 text-white flex font-medium"
+            className="bg-primary dark:bg-bodyColor dark:text-[#e5e7eb] w-full items-center py-[14px] justify-center rounded-full gap-2 text-white flex font-medium"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
