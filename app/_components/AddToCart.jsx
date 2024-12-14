@@ -2,13 +2,16 @@
 
 import { useState } from "react";
 import { useAuth } from "../_context/AuthContext";
+import { useRouter } from "next/navigation";
 
 function AddToCart({ data }) {
   const [quantity, setQuantity] = useState(1);
+  const router = useRouter();
   const { setCart } = useAuth();
   function handleAddToCart() {
     const newData = { ...data, quantity: quantity };
     setCart((cur) => [...cur, newData]);
+    router.push("/cart");
   }
   return (
     <div className="col-span-2">
