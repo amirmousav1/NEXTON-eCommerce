@@ -53,12 +53,12 @@ Follow these steps to run the project locally:
 
 ### Homepage
 
-![Homepage Screenshot](https://via.placeholder.com/800x450.png?text=Homepage)
+![Homepage Screenshot](./public/nextonecommerce.vercel.app.png)
 
 ### Product Details
 
-![Product Details Screenshot](https://via.placeholder.com/800x450.png?text=Product+Details)
+![Product Details Screenshot](./public/nextonecommerce.vercel.app_products.png)
 
 ### Cart
 
-![Cart Screenshot](https://via.placeholder.com/800x450.png?text=Cart)
+![Cart Screenshot](./public/nextonecommerce.vercel.app_cart.png)
