@@ -54,6 +54,7 @@ Follow these steps to run the project locally:
 ### Homepage
 
 ![Homepage Screenshot](./public/nextonecommerce.vercel.app.png)
+![Homepage Screenshot 2](./public/nextonecommerce.vercel.app_home.png)
 
 ### Product Details
 
