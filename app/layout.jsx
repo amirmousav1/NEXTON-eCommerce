@@ -50,42 +50,6 @@ export default function RootLayout({ children }) {
                   </defs>
                 </svg>
               </Link>
-              <form className="relative flex items-center">
-                <label
-                  className="absolute left-3 sm:left-5"
-                  htmlFor="searchInput"
-                >
-                  <svg
-                    className="size-[18px] sm:size-auto"
-                    width="21"
-                    height="20"
-                    viewBox="0 0 21 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M10.0834 17.5C14.4556 17.5 18 13.9556 18 9.58333C18 5.21108 14.4556 1.66667 10.0834 1.66667C5.7111 1.66667 2.16669 5.21108 2.16669 9.58333C2.16669 13.9556 5.7111 17.5 10.0834 17.5Z"
-                      stroke="#4B5563"
-                      strokeWidth="1.25"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M18.8334 18.3333L17.1667 16.6667"
-                      stroke="#4B5563"
-                      strokeWidth="1.25"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </label>
-                <input
-                  id="searchInput"
-                  type="text"
-                  className="focus:outline-none h-[36px] sm:h-[52px] w-[190px] sm:w-[400px] rounded-full pl-[36px] sm:pl-[54px] pr-3 text-bodyColor text-xs sm:text-sm"
-                  placeholder="Search in products..."
-                />
-              </form>
               <div className="flex gap-4 sm:gap-[22px]">
                 <HeaderUser />
               </div>

@@ -1,7 +1,7 @@
 import Slider from "./_components/Slider";
 import { Suspense } from "react";
 import Spinner from "./_components/Spinner";
-import RecommendationProducts from "./_components/RecommendationProducts";
+import RecommendedProductsList from "./_components/RecommendedProductsList";
 
 export default function Home() {
   return (
@@ -174,7 +174,7 @@ export default function Home() {
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             <Suspense fallback={<Spinner />}>
-              <RecommendationProducts />
+              <RecommendedProductsList />
             </Suspense>
           </div>
         </section>

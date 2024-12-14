@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-async function RecommendationProducts() {
+async function RecommendedProductsList() {
   const res = await fetch(
     "https://api.escuelajs.co/api/v1/products/?categoryId=1&offset=0&limit=12"
   );
@@ -35,4 +35,4 @@ async function RecommendationProducts() {
   );
 }
 
-export default RecommendationProducts;
+export default RecommendedProductsList;

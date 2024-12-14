@@ -60,7 +60,7 @@ export default function page() {
         <h1 className="text-center font-semibold text-4xl">Login</h1>
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col items-center mx-auto gap-6 mt-[60px] w-[440px]"
+          className="flex flex-col items-center mx-auto gap-6 mt-[60px] w-full sm:w-[440px]"
           action=""
         >
           <div className="flex flex-col gap-2 w-full">

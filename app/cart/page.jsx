@@ -25,6 +25,18 @@ export default function page() {
     setCart([]);
     router.push("/thankyou");
   }
+  if (!cart.length) {
+    return (
+      <div className="container mx-auto px-4 mt-10 text-center">
+        <h2 className="text-2xl font-semibold text-primary">
+          Your cart is empty.
+        </h2>
+        <Link href="/" className="text-primary underline mt-4 inline-block">
+          Go to Homepage
+        </Link>
+      </div>
+    );
+  }
   return (
     <div className="container mx-auto px-4 mt-10">
       <Toaster />

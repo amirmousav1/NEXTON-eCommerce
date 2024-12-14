@@ -4,7 +4,7 @@ import slide1 from "@/public/slide1.jpg";
 import slide2 from "@/public/slide2.jpg";
 import slide3 from "@/public/slide3.jpg";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const slides = [
   {
@@ -35,6 +35,13 @@ function Slider() {
   function showSlide(slide) {
     setCurrentSlide(slide);
   }
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((cur) => (cur === 3 ? 1 : cur + 1));
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="bg-[#F3F3F3] relative w-full h-[550px] md:h-[400px] lg:h-[500px] xl:h-[600px] flex items-center overflow-hidden">
       {slides.map((slide, i) => (
