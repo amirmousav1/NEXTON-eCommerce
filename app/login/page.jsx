@@ -2,10 +2,12 @@
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
+import { useAuth } from "../_context/AuthContext";
 
 export default function page() {
   const [email, setEmail] = useState("john@mail.com");
   const [password, setPassword] = useState("changeme");
+  const { setIsLoggedIn, setUser } = useAuth();
   const router = useRouter();
 
   const handleSubmit = async (e) => {
@@ -28,20 +30,27 @@ export default function page() {
       }
 
       const data = await response.json();
-
       localStorage.setItem("access_token", data.access_token);
       localStorage.setItem("refresh_token", data.refresh_token);
+      const res = await fetch("https://api.escuelajs.co/api/v1/auth/profile", {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${data.access_token}`,
+        },
+      });
+      if (!res.ok) {
+        throw new Error("Failed to fetch user data");
+      }
+      const user = await res.json();
+      setUser(user);
 
-      router.push("/profile");
+      setIsLoggedIn(true);
+      router.push("/");
     } catch (err) {
       toast.error(err.message);
     }
   };
-  useEffect(function () {
-    if (localStorage.getItem("access_token")) {
-      router.push("/profile");
-    }
-  }, []);
+
   return (
     <div className="container mt-10 mx-auto px-4">
       <div>

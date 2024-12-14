@@ -1,9 +1,15 @@
 "use client";
 
 import { useState } from "react";
+import { useAuth } from "../_context/AuthContext";
 
 function AddToCart({ data }) {
   const [quantity, setQuantity] = useState(1);
+  const { setCart } = useAuth();
+  function handleAddToCart() {
+    const newData = { ...data, quantity: quantity };
+    setCart((cur) => [...cur, newData]);
+  }
   return (
     <div className="col-span-2">
       <div className="border p-[33px] border-[#E5E7EB] rounded-2xl flex flex-col">
@@ -27,7 +33,10 @@ function AddToCart({ data }) {
               +
             </button>
           </div>
-          <button className="bg-primary w-full items-center py-[14px] justify-center rounded-full gap-2 text-white flex font-medium">
+          <button
+            onClick={handleAddToCart}
+            className="bg-primary w-full items-center py-[14px] justify-center rounded-full gap-2 text-white flex font-medium"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
