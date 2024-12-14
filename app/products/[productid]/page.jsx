@@ -1,6 +1,16 @@
 import AddToCart from "@/app/_components/AddToCart";
 import ProductSlider from "@/app/_components/ProductSlider";
 
+export async function generateMetadata({ params }) {
+  const { productid } = await params;
+
+  const res = await fetch(
+    `https://api.escuelajs.co/api/v1/products/${productid}`
+  );
+  const { title } = await res.json();
+  return { title: `${title}` };
+}
+
 export default async function Page({ params }) {
   const { productid } = await params;
   const res = await fetch(
